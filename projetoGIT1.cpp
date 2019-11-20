@@ -6,6 +6,8 @@
 */
 int contaLetras(char letra, string texto)
 {
+	letra = texto.length();
+	return letra;
 }
 
 /*
