@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 
 /*
@@ -6,7 +7,13 @@
 */
 int contaLetras(char letra, string texto)
 {
-	letra = texto.length();
+	int qtd, i, vezes=0;
+	qtd = texto.length();
+	for(i=0; i< qtd; i++)
+	{
+		if(texto[i] == letra)
+			vezes++
+	}
 	return letra;
 }
 
