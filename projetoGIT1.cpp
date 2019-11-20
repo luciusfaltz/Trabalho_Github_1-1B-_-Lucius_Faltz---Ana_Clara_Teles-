@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+using namespace std;
 
 /*
 	Conta todas as letras 'letra' contidas em 'texto'
@@ -14,7 +14,7 @@ int contaLetras(char letra, string texto)
 		if(texto[i] == letra)
 			vezes++
 	}
-	return letra;
+	return 0;
 }
 
 /*
@@ -22,6 +22,14 @@ int contaLetras(char letra, string texto)
 */
 void substituirLetra(char letra1,char letra2, string texto)
 {
+		int qtd, i;
+	qtd = texto.length();
+	for(i=0; i< qtd; i++)
+	{
+		if(texto[i] == letra1)
+			texto[i] = letra2;
+	}
+	
 }
 
 /*
