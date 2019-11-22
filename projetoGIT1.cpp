@@ -64,10 +64,31 @@ string substituirPalavras(string palavra1, string palavra2, string texto)
 
 int main(){
 
-	cout << "Entre com o texto para fazer o teste:";
-
-
-
+	int texto, contar, vezes;
+	string text, word, replace, palavrasubs, novotexto;
+	char letr, sbstituta, trocaletra ;
+	cout<< "Entre com o texto para fazer o teste:";
+	getline(cin, text);
+	cout<< "Insira a letra que voce deseja contabilizar:"
+	cin>>letr;
+	contar = contaLetras(letr, text);
+	cout<<"Insira a letra que voce deseja que seja trocada:";
+	cin>>trocaletra;
+	cout<<"insira a letra que ira substituir o item anterior:";
+	cin>>sbstituta;
+	substituirLetra(trocaletra, sbstituta, text);
+	cout<<"Insira a palavra que voce deseja que seja contabilizada:";
+	getline(cin, word);
+	vezes = contaPalavras(word, text);
+	cout<<"Insira a palavra que voce quer substituir:";
+	getline(cin, palavrasubs);
+	cout<<"Insira a palavra que voce deseja por no lugar:";
+	getline(cin, replace);
+	novotexto = substituirPalavras(palavrasubs, replace, text);
+	
+	cout<<"\nVezes em que a letra "<<letr<<" aparece no texto: "<<contar; 
+	cout<<"\n Vezes em que a palavra "<<word<<" aparece: "<< vezes;
+	cout<<"\n\n"<<novotexto;
 
 	return 0;
 }
